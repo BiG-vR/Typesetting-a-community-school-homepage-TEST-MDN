@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'oswaldlight';
+    src: url('fonts/oswald-light-webfont.eot');
+    src: url('fonts/oswald-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/oswald-light-webfont.woff2') format('woff2'),
+         url('fonts/oswald-light-webfont.woff') format('woff'),
+         url('fonts/oswald-light-webfont.ttf') format('truetype'),
+         url('fonts/oswald-light-webfont.svg#oswaldlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'oswaldmedium';
+    src: url('fonts/oswald-medium-webfont.eot');
+    src: url('fonts/oswald-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/oswald-medium-webfont.woff2') format('woff2'),
+         url('fonts/oswald-medium-webfont.woff') format('woff'),
+         url('fonts/oswald-medium-webfont.ttf') format('truetype'),
+         url('fonts/oswald-medium-webfont.svg#oswaldmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'arvoregular';
+    src: url('arvo-regular-webfont.eot');
+    src: url('arvo-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('arvo-regular-webfont.woff2') format('woff2'),
+         url('arvo-regular-webfont.woff') format('woff'),
+         url('arvo-regular-webfont.ttf') format('truetype'),
+         url('arvo-regular-webfont.svg#arvoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+:root {
+  --title-h1-color: #CC4425;
+  --background-body-color: #EAECEF;
+  --background-h2-color: #3E4147;
+  --color-p-elements: #3E4147;
+}
+
+h1 {
+ font-family: 'oswaldmedium', sans-serif;
+ font-size: 6rem;
+ font-weight: 400;
+ text-align: center;
+ color: var(--title-h1-color);
+ letter-spacing: 3px;
+ word-spacing: 15px;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+  background-color: var(--background-body-color);
+}
+
+/* Layout */
+
+section h2,
+aside h2 {
+  font-family: 'oswaldmedium', Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--background-h2-color);
+  letter-spacing: 3px;
+}
+
+ p::first-line {
+ text-indent: 20px;
+}
+
+p {
+ font-family: 'arvoregular', serif;
+ color: var(--color-p-elements);
+ font-size: 1.8rem;
+ line-height: 1.4;
+ letter-spacing: .4px
+}
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+/*styling Links*/
+
+a:link, 
+a:visited {
+  color: blue;
+}
+
+a:focus,
+a:hover {
+  color: blue;
+}
+
+a:active {
+  color: blue;
+}
+
+a[href*="wikipedia"] {
+  color: var(--title-h1-color);
+  font-family: 'arvoregular', serif;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  letter-spacing: .4px;
+}
+
+.ul li a {
+  color: var(--title-h1-color);
+  font-family: 'arvoregular', serif;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  letter-spacing: .4px;
+}
+
+.see  a {
+  color: var(--title-h1-color);
+  font-family: 'arvoregular', serif;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  letter-spacing: .4px;
+}
+
+a[href*="wikipedia"]::after {
+  content: "";
+  background: transparent url(img/open_in_new_black_24dp.svg) 0 0 no-repeat;
+  background-size: 16px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 3px;
+}
+
+.ol li a {
+  color: #CC4425;
+  font-family: 'arvoregular', serif;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  letter-spacing: .4px;
+ }
+
+
+
+/* Styling ul and ol list*/
+ul {
+ font-size: 1.8rem;
+ font-family: 'arvoregular', serif;
+ color: #3E4147;
+ line-height: 1.4;
+ letter-spacing: .4px;
+}
+
+ol {
+ font-size: 1.8rem;
+ font-family: 'arvoregular', serif;
+ color: #3E4147;
+ line-height: 1.4;
+ letter-spacing: .4px;
+ list-style-type: lower-alpha;
+}
+
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav ul li a {
+  color: var(--title-h1-color);
+  text-decoration: none;
+}
+
+#btn {
+  color: var(--color-p-elements);
+}
+ 
+
+.nav ul li:nth-child(1) {
+  padding: 8px;
+  border: 1px solid var(--color-p-elements);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.nav ul li:nth-child(2) {
+  padding: 8px;
+  border: 1px solid var(--title-h1-color);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.nav ul li:nth-child(3) {
+  padding: 8px;
+  border: 1px solid var(--title-h1-color);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.nav ul li:nth-child(4) {
+  padding: 8px;
+  border: 1px solid var(--title-h1-color);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.nav ul li:nth-child(5) {
+  padding: 8px;
+  border: 1px solid var(--title-h1-color);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.nav ul li:nth-child(6) {
+  padding: 8px;
+  border: 1px solid var(--title-h1-color);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+
+
+footer {
+  clear: both;
+  text-align: center;
+}
+
+header, section, aside, nav, footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+
